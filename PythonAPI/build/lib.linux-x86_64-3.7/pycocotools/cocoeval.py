@@ -346,6 +346,7 @@ class COCOeval:
         # get inds to evaluate
         # k_list = [n for n, k in enumerate(p.catIds)  if k in setK]
         k_list = [setK.index(k) for n, k in enumerate(p.catIds)  if k in setK]
+        print('k_list', k_list, setK, p.catIds)
         m_list = [m for n, m in enumerate(p.maxDets) if m in setM]
         a_list = [n for n, a in enumerate(map(lambda x: tuple(x), p.areaRng)) if a in setA]
         i_list = [n for n, i in enumerate(p.imgIds)  if i in setI]
